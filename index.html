@@ -1,0 +1,66 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<!--
+Design by Free CSS Templates
+http://www.freecsstemplates.org
+Released for free under a Creative Commons Attribution 2.5 License
+
+Name       : Vestibule 
+Description: A two-column, fixed-width design with dark color scheme.
+Version    : 1.0
+Released   : 20130406
+
+-->
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta name="keywords" content="" />
+<meta name="description" content="" />
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>2nd Generation</title>
+<link href="http://fonts.googleapis.com/css?family=Oxygen:400,700,300" rel="stylesheet" type="text/css" />
+<link href="style.css" rel="stylesheet" type="text/css" media="screen" />
+<link rel="stylesheet" type="text/css" href="lib/jquery.ad-gallery.css">
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.2/jquery-ui.min.js"></script>
+<script type="text/javascript">
+	$(document).ready(function(){
+		$('#bannerImage').show('slow');
+
+		$('#menu-wrapper').load('navigation.html', function(){
+			$('li').removeClass("current_page_item", function(){
+				$('#indexNav').addClass("current_page_item");
+			});	
+		});
+	});
+</script>
+</head>
+<body>
+<div id="wrapper">
+	<div id="menu-wrapper" name="menu-wrapper">
+	</div>
+
+	<div id="logo" class="container">
+		 <img id="bannerImage" name="bannerImage" src="images/Banner.jpg" style="display:none;"/> 
+	</div>
+
+	<div id="page" class="container">
+		<div>
+			<div class="entry">
+				<p><b><i>2nd Generation</i></b> is a female fronted five piece band,
+				specializing in the best variety of classic 60s, 70s, and 80s dance music,
+				including R &amp; B, Motown, current hits, and oldies to get everyone onto the
+				dance floor!</p>
+
+				<p>They've played hundreds of events, including singles dances, company
+				parties, weddings, class reunions, and outdoor festivals. They opened for
+				Johnny Lang at the Withrow Ballroom in 1996, and were featured at the 2000
+				Taste of Minnesota. </p>
+			</div>
+		</div>
+	</div>
+</div>
+<div id="footer">
+	<p>© 2013 2nd Generation Band. All rights reserved. Design by <a href="http://www.freecsstemplates.org">FCT</a>.  </p>
+</div>
+<!-- end #footer -->
+</body>
+</html>

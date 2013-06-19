@@ -1,0 +1,214 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<!--
+Design by Free CSS Templates
+http://www.freecsstemplates.org
+Released for free under a Creative Commons Attribution 2.5 License
+
+Name       : Vestibule 
+Description: A two-column, fixed-width design with dark color scheme.
+Version    : 1.0
+Released   : 20130406
+
+-->
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta name="keywords" content="" />
+<meta name="description" content="" />
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>2nd Generation</title>
+<link href="http://fonts.googleapis.com/css?family=Oxygen:400,700,300" rel="stylesheet" type="text/css" />
+<link href="style.css" rel="stylesheet" type="text/css" media="screen" />
+<link rel="stylesheet" type="text/css" href="lib/jquery.ad-gallery.css">
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.2/jquery-ui.min.js"></script>
+<script type="text/javascript" src="lib/jquery.ad-gallery.js"></script>
+<script type="text/javascript">
+	$(document).ready(function(){
+		$('#bannerImage').show('slow');
+
+		$('#menu-wrapper').load('navigation.html', function(){
+      $('li').removeClass("current_page_item", function(){
+        $('#photosNav').addClass("current_page_item");
+      }); 
+    });
+
+        /*
+		$('img.image1').data('ad-desc', 'Whoa! This description is set through elm.data("ad-desc") instead of using the longdesc attribute.<br>And it contains <strong>H</strong>ow <strong>T</strong>o <strong>M</strong>eet <strong>L</strong>adies... <em>What?</em> That aint what HTML stands for? Man...');
+	    $('img.image1').data('ad-title', 'Title through $.data');
+	    $('img.image4').data('ad-desc', 'This image is wider than the wrapper, so it has been scaled down');
+	    $('img.image5').data('ad-desc', 'This image is higher than the wrapper, so it has been scaled down');
+      */
+	    var galleries = $('.ad-gallery').adGallery();
+	    
+	    $('#switch-effect').change(
+	      function() {
+	        galleries[0].settings.effect = $(this).val();
+	        return false;
+	      }
+	    );
+	    $('#toggle-slideshow').click(
+	      function() {
+	        galleries[0].slideshow.toggle();
+	        return false;
+	      }
+	    );
+	    $('#toggle-description').click(
+	      function() {
+	        if(!galleries[0].settings.description_wrapper) {
+	          galleries[0].settings.description_wrapper = $('#descriptions');
+	        } else {
+	          galleries[0].settings.description_wrapper = false;
+	        }
+	        return false;
+	      }
+	    );
+	});
+</script>
+</head>
+<body>
+<div id="wrapper">
+	<div id="menu-wrapper" name="menu-wrapper">
+
+	</div>
+	
+
+	<div id="logo" class="container">
+		 <img id="bannerImage" name="bannerImage" src="images/image013.jpg" style="display:none;"/> 
+	</div>
+
+	<div id="three-column" class="container">
+
+		<div id="gallery" class="ad-gallery container" style="margin:0px auto;">
+      <div class="ad-image-wrapper">
+      </div>
+      <div class="ad-controls">
+      </div>
+      <div class="ad-nav">
+        <div class="ad-thumbs">
+          <ul class="ad-thumb-list">
+            <li>
+              <a href="images/Andy24.jpg">
+                <img src="thumbs/tn_Andy24.jpg" class="image0">
+              </a>
+            </li>
+            <li>
+              <a href="images/ANDYDOUG.jpg">
+                <img src="thumbs/tn_ANDYDOUG.jpg" class="image1" title="This is Andy and Doug" longdesc="Andy Richards">
+              </a>
+            </li>
+            <li>
+              <a href="images/BANDDOUG.jpg">
+                <img src="thumbs/tn_BANDDOUG.jpg" title="This is Doug" longdesc="Doug Salmela" class="image2">
+              </a>
+            </li>
+            <li>
+              <a href="images/BANDLISA.jpg">
+                <img src="thumbs/tn_BANDLISA.jpg" title="A title for 11.jpg">
+              </a>
+            </li>
+            <li>
+              <a href="images/BANDLISA2.jpg">
+                <img src="thumbs/tn_BANDLISA2.jpg" title="A title for 11.jpg">
+              </a>
+            </li>
+            <li>
+              <a href="images/BANDMART.jpg">
+                <img src="thumbs/tn_BANDMART.jpg" title="A title for 11.jpg">
+              </a>
+            </li>
+            <li>
+              <a href="images/BANDMIK.jpg">
+                <img src="thumbs/tn_BANDMIK.jpg" title="A title for 11.jpg">
+              </a>
+            </li>
+            <li>
+              <a href="images/BANDML.jpg">
+                <img src="thumbs/tn_BANDML.jpg" title="A title for 11.jpg">
+              </a>
+            </li>
+            <li>
+              <a href="images/Group13.jpg">
+                <img src="thumbs/tn_Group13.jpg" title="A title for 11.jpg">
+              </a>
+            </li>
+            <li>
+              <a href="images/image001.jpg">
+                <img src="thumbs/tn_image001.jpg" title="A title for 11.jpg">
+              </a>
+            </li>
+            <li>
+              <a href="images/image015.jpg">
+                <img src="thumbs/tn_image015.jpg" title="A title for 11.jpg">
+              </a>
+            </li>
+            <li>
+              <a href="images/image017.jpg">
+                <img src="thumbs/tn_image017.jpg" title="A title for 11.jpg">
+              </a>
+            </li>
+            <li>
+              <a href="images/image019.jpg">
+                <img src="thumbs/tn_image019.jpg" title="A title for 11.jpg">
+              </a>
+            </li>
+            <li>
+              <a href="images/image021.jpg">
+                <img src="thumbs/tn_image021.jpg" title="A title for 11.jpg">
+              </a>
+            </li>
+            <li>
+              <a href="images/image025.jpg">
+                <img src="thumbs/tn_image025.jpg" title="A title for 11.jpg">
+              </a>
+            </li>
+            <li>
+              <a href="images/image027.jpg">
+                <img src="thumbs/tn_image027.jpg" title="A title for 11.jpg">
+              </a>
+            </li>
+            <li>
+              <a href="images/image029.jpg">
+                <img src="thumbs/tn_image029.jpg" title="A title for 11.jpg">
+              </a>
+            </li>
+            <li>
+              <a href="images/image031.jpg">
+                <img src="thumbs/tn_image031.jpg" title="A title for 11.jpg">
+              </a>
+            </li>
+            <li>
+              <a href="images/image033.jpg">
+                <img src="thumbs/tn_image033.jpg" title="A title for 11.jpg">
+              </a>
+            </li>
+            <li>
+              <a href="images/image027.jpg">
+                <img src="thumbs/tn_image035.jpg" title="A title for 11.jpg">
+              </a>
+            </li>
+            <li>
+              <a href="images/image027.jpg">
+                <img src="thumbs/tn_image037.jpg" title="A title for 11.jpg">
+              </a>
+            </li>
+            <li>
+              <a href="images/secgentrish2.tif">
+                <img src="thumbs/tn_secgentrish2.jpg" title="A title for 11.jpg">
+              </a>
+            </li>
+            <li>
+              <a href="images/trish.tif">
+                <img src="thumbs/tn_trish.jpg" title="A title for 11.jpg">
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+</div>
+<div id="footer">
+	<p>© 2013 Untitled Inc. All rights reserved. Lorem ipsum dolor sit amet nullam blandit consequat phasellus etiam lorem. Design by <a href="http://www.freecsstemplates.org">FCT</a>.  Photos by <a href="http://fotogrph.com/">Fotogrph</a>.</p>
+</div>
+<!-- end #footer -->
+</body>
+</html>
