@@ -38,7 +38,13 @@ Released   : 20130406
 	    $('img.image4').data('ad-desc', 'This image is wider than the wrapper, so it has been scaled down');
 	    $('img.image5').data('ad-desc', 'This image is higher than the wrapper, so it has been scaled down');
       */
-	    var galleries = $('.ad-gallery').adGallery();
+	    var galleries = $('.ad-gallery').adGallery({
+        slideshow: {
+          enable: true,
+          autostart: true,
+          speed: 3000
+        }
+      });
 	    
 	    $('#switch-effect').change(
 	      function() {
