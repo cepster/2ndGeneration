@@ -43,8 +43,8 @@ ul, ol {
 }
 
 a {
-	text-decoration: none;
-	color: #5BA689;
+	
+	color: blue;
 }
 
 a:hover {
@@ -111,7 +111,7 @@ a:hover {
 	padding-top:50px;
 	padding-bottom:20px;
 	overflow:hidden;
-	height:350px;
+	height:450px;
 	width:720px;
 	padding-left:25%;
 }
@@ -283,6 +283,13 @@ a:hover {
 	padding: 0px 0px 20px 0px;
 	padding-bottom: 20px;
 	text-align: justify;
+	font-size:20pt;
+}
+
+.entry p{
+	font-size:20pt;
+	font-family: “Arial Rounded MT Bold”, “Helvetica Rounded”, Arial, sans-serif;
+	color:black;
 }
 
 .links {
