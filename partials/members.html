@@ -1,0 +1,26 @@
+<div id="logo" class="container">
+	 <img id="bannerImage" name="bannerImage" src="images/Bios.jpg"/> 
+</div>
+<div id="page" class="container">
+	<div>
+		<div class="entry">
+			<table class="tablesorter bandbio" style="width:85%;">
+				<tbody>
+					<tr ng-repeat="member in members">
+						<td width="50%" style="text-align:center;">
+							<font color="red">{{member.name}}</font><p> {{member.instrument}}</p>
+							<img ng-src="{{member.imageURL}}" style="height:400px;width:65%;"/>
+						</td>
+						<td style="text-align:center;">
+							<br/>
+							{{member.description}}
+						</td>
+					</tr>
+					<tr>
+						<td colspan="2"><br/></td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+	</div>
+</div>
