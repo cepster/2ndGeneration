@@ -10,73 +10,46 @@ Version    : 1.0
 Released   : 20130406
 
 -->
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html xmlns="http://www.w3.org/1999/xhtml" ng-app="2ndGen">
 <head>
-<meta name="keywords" content="" />
-<meta name="description" content="" />
-<meta http-equiv="content-type" content="text/html; charset=utf-8" />
-<title>2nd Generation</title>
-<link href="http://fonts.googleapis.com/css?family=Oxygen:400,700,300" rel="stylesheet" type="text/css" />
-<link href="style.css" rel="stylesheet" type="text/css" media="screen" />
-<link rel="stylesheet" type="text/css" href="lib/jquery.ad-gallery.css">
-<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.2/jquery-ui.min.js"></script>
-<script type="text/javascript">
-	$(document).ready(function(){
-		$('#bannerImage').show('slow');
-
-		$('#menu-wrapper').load('navigation.html', function(){
-			$('li').removeClass("current_page_item", function(){
-				$('#indexNav').addClass("current_page_item");
-			});	
-		});
-	});
-</script>
+	<meta name="keywords" content="" />
+	<meta name="description" content="" />
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+	<title>2nd Generation</title>
+	<link href="http://fonts.googleapis.com/css?family=Oxygen:400,700,300" rel="stylesheet" type="text/css" />
+	<link href="style.css" rel="stylesheet" type="text/css" media="screen" />
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+	<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.2/jquery-ui.min.js"></script>
 </head>
 <body>
-<div id="wrapper">
-	<div id="menu-wrapper" name="menu-wrapper">
-		<div id="menu" name="menu" class="container">
-			<ul>
-				<li id="indexNav" name="indexNav"><a href="index.html">Home</a></li>
-				<li id="gigsNav" name="gigsNav"><a href="gigs.html">Gigs</a></li>
-				<li id="membersNav" name="membersNav"><a href="members.html">Members</a></li>
-				<li id="bookingNav" name="bookingNav"><a href="booking.html">Booking Info</a></li>
-				<li id="songListNav" name="songListNav"><a href="songList.html">Song List</a></li>
-				<li id="photosNav" name="photosNav"><a href="photos.html">Photos</a></li>
-				<li id="sampleNav" name="sampleNav"><a href="sample.html">Music Demo</a></li>
-			</ul>
-		</div>
-	</div>
-
-	<div id="logo" class="container">
-		 <img id="bannerImage" name="bannerImage" src="images/Banner.jpg" style="display:none;"/> 
-	</div>
-
-	<div id="bandImage" class="container">
-		
-		<img src="images/secgentrish2.jpg"/>
-	</div>
-
-	<div id="page" class="container">
-		<div>
-			<div class="entry" style="color:black;">
-				<p><b><i>2nd Generation</i></b> is a female fronted five piece band,
-				specializing in the best variety of classic 60s, 70s, and 80s dance music,
-				including R &amp; B, Motown, current hits, and oldies to get everyone onto the
-				dance floor!</p>
-
-				<p>They've played hundreds of events, including singles dances, company
-				parties, weddings, class reunions, and outdoor festivals. They opened for
-				Johnny Lang at the Withrow Ballroom in 1996, and were featured at the 2000
-				Taste of Minnesota. </p>
+	<div id="wrapper">
+		<div id="menu-wrapper" name="menu-wrapper">
+			<div id="menu" name="menu" class="container">
+				<ul>
+					<li id="indexNav" name="indexNav"><a href="#/index">Home</a></li>
+					<li id="gigsNav" name="gigsNav"><a href="#/gigs">Gigs</a></li>
+					<li id="membersNav" name="membersNav"><a href="#/members">Members</a></li>
+					<li id="songListNav" name="songListNav"><a href="#/songList">Song List</a></li>
+					<li id="photosNav" name="photosNav"><a href="#/photos">Photos</a></li>
+					<li id="sampleNav" name="sampleNav"><a href="#/demo">Music Demo</a></li>
+					<li id="silverHammerNav" name="silverHammerNav"><a href="#/silverHammer">S-H Info</a></li>
+					<li id="silverHammerMediaNav" name="silverHammerMediaNav"><a href="#/silverHammerMedia">S-H Media</a></li>
+					<li id="silverHammerSongListNav" name="silverHammerSongListNav"><a href="#/silverHammerSongList">S-H Song List</a></li>
+				</ul>
 			</div>
 		</div>
+
+		<div ng-view></div>
+
+		
 	</div>
-</div>
-<div id="footer">
-	<p>© 2013 2nd Generation Band. All rights reserved. Design by <a href="http://www.freecsstemplates.org">FCT</a>.  </p>
-</div>
-<!-- end #footer -->
+	<div id="footer">
+		<p>© 2013 2nd Generation Band. All rights reserved. Design by <a href="http://www.freecsstemplates.org">FCT</a>.  </p>
+	</div>
+	<!-- end #footer -->
+
+	<script type="text/javascript" src="lib/angular.min.js"></script>
+	<script type="text/javascript" src="app/app.js"></script>
+	<script type="text/javascript" src="app/controllers.js"></script>
 </body>
 </html>

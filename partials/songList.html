@@ -1,0 +1,50 @@
+<div id="logo" class="container">
+	 <img id="bannerImage" name="bannerImage" src="images/image041.jpg"/> 
+</div>
+
+<div id="page" class="container">
+	<div>
+		<div class="entry">
+			<table class="tablesorter" cellpadding="5">
+				<thead>
+					<tr>
+						<th style="text-align:left;">
+							Title
+						</th>
+						<th style="text-align:left;">
+							Artist
+						</th>
+						<th style="text-align:left;">
+							Genre
+						</th>
+						<th style="text-align:left;">
+							Date
+						</th>
+						<th style="text-align:left;">
+							Billboard
+						</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr ng-repeat="song in songs">
+						<td>
+							{{song.title}}
+						</td>
+						<td>
+							{{song.artist}}
+						</td>
+						<td>
+							{{song.genre}}
+						</td>
+						<td>
+							{{song.date}}
+						</td>
+						<td>
+							{{song.billboard}}
+						</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+	</div>
+</div>
