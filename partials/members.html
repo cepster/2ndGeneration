@@ -8,16 +8,15 @@
 				<tbody>
 					<tr ng-repeat="member in members">
 						<td width="50%" style="text-align:center;">
-							<font color="red">{{member.name}}</font><p> {{member.instrument}}</p>
+							<!--<font color="red">{{member.name}}</font><p> {{member.instrument}}</p>-->
+							<p style="color:red;">{{member.name}}</p><p style="font-size:8pt;">{{member.instrument}}</p>
 							<img ng-src="{{member.imageURL}}" style="height:400px;width:65%;"/>
+							<br/><br/><br/><br/><br/><br/>
 						</td>
 						<td style="text-align:center;">
 							<br/>
 							{{member.description}}
 						</td>
-					</tr>
-					<tr>
-						<td colspan="2"><br/></td>
 					</tr>
 				</tbody>
 			</table>
