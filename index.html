@@ -23,22 +23,26 @@ Released   : 20130406
 </head>
 <body>
 	<div id="wrapper">
-		<div id="menu-wrapper" name="menu-wrapper">
+		<div id="menu-wrapper" name="menu-wrapper" ng-controller="NavigationController">
 			<div id="menu" name="menu" class="container">
-				<ul>
+				<ul ng-show="is2ndGen()">
 					<li id="indexNav" name="indexNav"><a href="#/index">Home</a></li>
 					<li id="gigsNav" name="gigsNav"><a href="#/gigs">Gigs</a></li>
 					<li id="membersNav" name="membersNav"><a href="#/members">Members</a></li>
 					<li id="songListNav" name="songListNav"><a href="#/songList">Song List</a></li>
 					<li id="photosNav" name="photosNav"><a href="#/photos">Photos</a></li>
 					<li id="sampleNav" name="sampleNav"><a href="#/demo">Music Demo</a></li>
-					<li id="silverHammerNav" name="silverHammerNav"><a href="#/silverHammer">S-H Info</a></li>
-					<li id="silverHammerMediaNav" name="silverHammerMediaNav"><a href="#/silverHammerMedia">S-H Media</a></li>
-					<li id="silverHammerSongListNav" name="silverHammerSongListNav"><a href="#/silverHammerSongList">S-H Song List</a></li>
+					<li id="silverHammer" name="silverHammer"><a href="#/silverHammer" ng-click="navigateToSilverHammer()">The Silver Hammer Quartet</a></li>
+				</ul>
+				<ul ng-show="isSilverHammer()">
+					<li id="silverHammerNav" name="silverHammerNav"><a href="#/silverHammer">Information</a></li>
+					<li id="silverHammerMediaNav" name="silverHammerMediaNav"><a href="#/silverHammerMedia">Media</a></li>
+					<li id="silverHammerSongListNav" name="silverHammerSongListNav"><a href="#/silverHammerSongList">Song List</a></li>
+					<li id="2ndGen" name="2ndGen"><a href="#/index" ng-click="navigateTo2ndGen()">Back to 2nd Generation</a></li>
 				</ul>
 			</div>
+			2ndGen: {{is2ndGen()}}
 		</div>
-
 		<div ng-view></div>
 
 		
