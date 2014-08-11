@@ -46,7 +46,7 @@ app.config(['$routeProvider', function($routeProvider){
 	})
 	.otherwise({
 		redirectTo: 'index/'
-	})
+	});
 }]);
 
 app.controller('NavigationController', function($scope, $location){
