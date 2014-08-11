@@ -1,1 +1,34 @@
-Song List!
+<div id="page" class="container">
+	<div>
+		<div class="entry">
+			<table class="tablesorter" cellpadding="5" style="margin-left:auto;margin-right:auto;margin-top:30px;">
+				<thead>
+					<tr>
+						<th style="text-align:left;">
+							Title
+						</th>
+						<th style="text-align:left;">
+							Album
+						</th>
+						<th style="text-align:left;">
+							Year
+						</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr ng-repeat="song in songs">
+						<td>
+							{{song.title}}
+						</td>
+						<td>
+							{{song.album}}
+						</td>
+						<td>
+							{{song.year}}
+						</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+	</div>
+</div>

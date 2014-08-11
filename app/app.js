@@ -49,7 +49,7 @@ app.config(['$routeProvider', function($routeProvider){
 	})
 }]);
 
-app.controller('NavigationController', function($scope){
+app.controller('NavigationController', function($scope, $location){
 	$scope.navigationMode = '2ndGen';
 
 	$scope.navigateTo2ndGen = function(){
@@ -67,6 +67,14 @@ app.controller('NavigationController', function($scope){
 	$scope.isSilverHammer = function(){
 		return $scope.navigationMode === 'silverHammer';
 	};
+
+	var path = $location.$$path;
+	if(path === '/silverHammer' || path === '/silverHammerMedia' || path === '/silverHammerSongList'){
+		$scope.navigateToSilverHammer();
+	}
+	else{
+		$scope.navigateTo2ndGen();
+	}
 });
 
 app.controller('IndexCtrl', function($scope){
@@ -864,4 +872,266 @@ app.controller('SilverHammerMediaCtrl', function($scope){
 });
 
 app.controller('SilverHammerSongListCtrl', function($scope){
+	$scope.songs = [
+		{
+			title: 'I Should Have Known Better',
+			album: 'A Hard Day\'s Night',
+			year: '1964'
+		},
+		{
+			title: 'Eight Days a Week',
+			album: 'Beatles for Sale',
+			year: '1964'
+		},
+		{
+			title: 'Norwegian Wood',
+			album: 'Rubber Soul',
+			year: '1965'
+		},
+		{
+			title: 'If I Fell',
+			album: 'A Hard Day\'s Night',
+			year: '1964'
+		},
+		{
+			title: 'I Want To Hold Your Hand',
+			album: 'Meet the Beatles!',
+			year: '1964'
+		},
+		{
+			title: 'I\'ve Just Seen a Face',
+			album: 'Help!',
+			year: '1965'
+		},
+		{
+			title: 'I\'ll Be Back',
+			album: 'A Hard Day\'s Night',
+			year: '1964'
+		},
+		{
+			title: 'Dizzy Miss Lizzy',
+			album: 'Help!',
+			year: '1965'
+		},
+		{
+			title: 'I\'m a Loser',
+			album: 'Beatles For Sale',
+			year: '1964'
+		},
+		{
+			title: 'All I\'ve Gotta Do',
+			album: 'With the Beatles',
+			year: '1963'
+		},
+		{
+			title: 'Penny Lane',
+			album: 'Magical Mystery Tour',
+			year: '1967'
+		},
+		{
+			title: 'Maxwell\'s Silver Hammer',
+			album: 'Abbey Road',
+			year: '1969'
+		},
+		{
+			title: 'I Feel Fine',
+			album: 'Beatles \'65',
+			year: '1964'
+		},
+		{
+			title: 'And I Love Her',
+			album: 'A Hard Day\'s Night',
+			year: '1964'
+		},
+		{
+			title: 'I Don\'t Want to Spoil The Party',
+			album: 'Beatles for Sale',
+			year: '1964'
+		},
+		{
+			title: 'If I Needed Someone',
+			album: 'Rubber Soul',
+			year: '1965'
+		},
+		{
+			title: 'She Loves You',
+			album: 'Single',
+			year: '1963'
+		},
+		{
+			title: 'I Saw Her Standing There',
+			album: 'Please Please Me',
+			year: '1963'
+		},
+		{
+			title: 'Rock and Roll Music',
+			album: 'Beatles for Sale',
+			year: '1964'
+		},
+		{
+			title: 'This Boy',
+			album: 'Meet the Beatles!',
+			year: '1964'
+		},
+		{
+			title: 'You\'re Gonna Lose That Girl',
+			album: 'Help!',
+			year: '1965'
+		},
+		{
+			title: 'You\'ve Got to Hide Your Love Away',
+			album: 'Help!',
+			year: '1965'
+		},
+		{
+			title: 'You Can\'t Do That',
+			album: 'A Hard Day\'s Night',
+			year: '1964'
+		},
+		{
+			title: 'With a Little Help From My Friends',
+			album: 'Sgt Pepper\'s Lonely Hearts Club Band',
+			year: '1967'
+		},
+		{
+			title: 'All My Lovin\'',
+			album: 'With the Beatles',
+			year: '1963'
+		},
+		{
+			title: 'Revolution',
+			album: 'The White Album',
+			year: '1968'
+		},
+		{
+			title: 'The Ballad of John and Yoko',
+			album: 'Single',
+			year: '1969'
+		},
+		{
+			title: 'Baby\'s in Black',
+			album: 'Beatles for Sale',
+			year: '1964'
+		},
+		{
+			title: 'Nowhere Man',
+			album: 'Rubber Soul',
+			year: '1965'
+		},
+		{
+			title: 'Don\'t Let Me Down',
+			album: 'Let it Be',
+			year: '1970'
+		},
+		{
+			title: 'We Can Work It Out',
+			album: 'Single, Double A-sided with Day Tripper',
+			year: '1965'
+		},
+		{
+			title: 'Jealous Guy',
+			album: 'Imagine (John Lennon)',
+			year: '1971'
+		},
+		{
+			title: 'For You Blue',
+			album: 'Let it Be',
+			year: '1970'
+		},
+		{
+			title: 'I\'ll Follow the Sun',
+			album: 'Beatles for Sale',
+			year: '1964'
+		},
+		{
+			title: 'In My Life',
+			album: 'Rubber Soul',
+			year: '1965'
+		},
+		{
+			title: 'Tell Me Why',
+			album: 'A Hard Day\'s Night',
+			year: '1964'
+		},
+		{
+			title: 'A Hard Day\'s Night',
+			album: 'A Hard Day\'s Night',
+			year: '1964'
+		},
+		{
+			title: 'Hey Jude',
+			album: 'Single, Revolution B-side',
+			year: '1968'
+		},
+		{
+			title: 'Across the Universe',
+			album: 'Let it Be',
+			year: '1970'
+		},
+		{
+			title: 'Blackbird',
+			album: 'The White Album',
+			year: '1968'
+		},
+		{
+			title: 'Mother Nature\'s Son',
+			album: 'the White Album',
+			year: '1968'
+		},
+		{
+			title: 'Julia',
+			album: 'The White Album',
+			year: '1968'
+		},
+		{
+			title: 'Dear Prudence',
+			album: 'The White Album',
+			year: '1968'
+		},
+		{
+			title: 'For No One',
+			album: 'Revolution',
+			year: '1966'
+		},
+		{
+			title: 'Here Comes The Sun',
+			album: 'Abbey Road',
+			year: '1969'
+		},
+		{
+			title: 'Here, There, and Everywhere',
+			album: 'Revolver',
+			year: '1966'
+		},
+		{
+			title: 'I Will',
+			album: 'The White Album',
+			year: '1968'
+		},
+		{
+			title: 'Love',
+			album: 'Single',
+			year: '1967'
+		},
+		{
+			title: 'Michelle',
+			album: 'Rubber Soul',
+			year: '1965'
+		},
+		{
+			title: 'Oh My Love',
+			album: 'Imagine (John Lennon)',
+			year: '1971'
+		},
+		{
+			title: 'While My Guitar Gently Weeps',
+			album: 'The White Album',
+			year: '1968'
+		},
+		{
+			title: 'Yesterday',
+			album: 'Help!',
+			year: '1965'
+		}
+	];
 });
